@@ -1,0 +1,139 @@
+/* Stylesheet generated from TextMate theme
+ *
+ * subethaedit
+ * subethaedit
+ *
+ */
+
+
+/* Mostly to improve view within the TextMate HTML viewer */
+body {
+	margin: 0;
+	padding: 0;
+}
+
+pre.textmate-source {
+//margin: -10px -22px 0px 0px;
+padding: 10px 10px 10px 10px;
+	font-family: Monaco, monospace;
+	font-size: 11px;
+	line-height: 1.3em;
+	
+	border: 2px solid #c5c5c5;
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -o-pre-wrap;
+}
+
+
+pre.textmate-source.subethaedit {
+	color: #080808;
+	background-color: #F9F9F9;
+}
+
+
+pre.textmate-source .linenum {
+	width: 75px;
+	padding: 0.1em 1em 0.2em 0;
+	color: #888;
+	background-color: #eee;
+}
+pre.textmate-source.subethaedit span {
+   padding-top: 0.2em;
+   padding-bottom: 0.1em;
+}
+pre.textmate-source.subethaedit ::selection {
+	background-color: #B4D5FF;
+}
+/* Comment */
+pre.textmate-source.subethaedit .comment {
+}
+
+/* String */
+pre.textmate-source.subethaedit .string {
+}
+
+/* Number */
+pre.textmate-source.subethaedit .constant_numeric {
+	color: #0000FF;
+}
+
+/* Built-in constant */
+pre.textmate-source.subethaedit .constant_language {
+	color: #400080;
+}
+
+/* User-defined constant */
+pre.textmate-source.subethaedit .constant_character, pre.textmate-source.subethaedit .constant_other {
+	color: #400080;
+}
+
+/* Variable */
+pre.textmate-source.subethaedit .variable_language, pre.textmate-source.subethaedit .variable_other {
+	color: #751150;
+}
+
+/* Keyword */
+pre.textmate-source.subethaedit .keyword {
+	color: #1A1AA6;
+}
+
+/* Storage */
+pre.textmate-source.subethaedit .storage {
+	color: #751150;
+}
+
+/* Class name */
+pre.textmate-source.subethaedit .entity_name_class {
+	color: #751150;
+}
+
+/* Inherited class */
+pre.textmate-source.subethaedit .entity_other_inherited-class {
+}
+
+/* Function name */
+pre.textmate-source.subethaedit .entity_name_function {
+	color: #003369;
+}
+
+/* Function argument */
+pre.textmate-source.subethaedit .variable_parameter {
+}
+
+/* Tag name */
+pre.textmate-source.subethaedit .entity_name_tag {
+}
+
+/* Tag attribute */
+pre.textmate-source.subethaedit .entity_other_attribute-name {
+}
+
+/* Library function */
+pre.textmate-source.subethaedit .support_function {
+	color: #003369;
+}
+
+/* Library constant */
+pre.textmate-source.subethaedit .support_constant {
+	color: #400080;
+}
+
+/* Library class/type */
+pre.textmate-source.subethaedit .support_type, pre.textmate-source.subethaedit .support_class {
+	color: #751150;
+}
+
+/* Library variable */
+pre.textmate-source.subethaedit .support_other_variable {
+	color: #751150;
+}
+
+/* Invalid */
+pre.textmate-source.subethaedit .invalid {
+}
+
+
+

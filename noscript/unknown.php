@@ -1,0 +1,1 @@
+Unfortunately it was not possible to determine your browser or system configurations so we can't provide you with the instructions you need.  We suggest that you try asking <a href="http://www.google.com/search?q=enable+javascript">Google</a> instead.

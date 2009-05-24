@@ -1,0 +1,595 @@
+<html>
+<head>
+	<title>Console</title>
+	<style type="text/css" media="screen">
+	    /* Themeable components */
+	    body {
+	        background-color: black;
+	    }
+		.console {
+		    color: white;
+			font-size: 10px;
+			font-family: Monaco, Courier, monospace;
+		}
+		
+		#cursor {
+    	    /*border-left: 1px solid rgba(255,255,255,0);*/
+	    }
+		#cursor[show="yes"] {
+		    background-color: red;
+		    /*border-left: 1px solid red;*/
+		}
+		/* Other */
+		.console {
+    	    white-space: pre;
+    	    white-space: pre-wrap;
+    		margin: 0px;
+    		padding: 0px;
+	    }
+		#autocomplete-results {
+		    margin: 20px;
+			font-size: 10pt;
+		}
+		#autocomplete-list {
+			display: inline-block;
+			margin: 0;
+			padding: 10px;
+			list-style-type: none;
+			background-color: #EEEEEE;
+        	-moz-border-radius: 10px;
+        	-webkit-border-radius: 10px;
+		}
+		#autocomplete-list > li:hover {
+			text-decoration: underline;
+		}
+		#hidden-input {
+			position: absolute;
+			top: -100px;
+			right: 0px;
+		}
+		.domlink:hover {
+		    text-decoration: underline;
+		}
+		body {
+			padding-bottom: 100px;
+		}
+	</style>
+	<script type="text/javascript" charset="utf-8">
+	
+	_console = function() {    
+		function $(id) { return document.getElementById(id); }
+		
+		function evalInContext(code)
+		{
+			with (window_context) {
+				if (typeof(objj_preprocess) != "undefined")
+					code = objj_preprocess(code)[0].info;
+				return eval(code);
+			}
+		}
+		
+		function clear()
+		{
+		    while (console_history.firstChild)
+		        console_history.removeChild(console_history.firstChild);
+		}
+		
+		function matching_chars(matches)
+		{
+			// match as many characters as possible
+			// don't worry about matching the input string, since they all should
+			var done = false, curCharNum = 0, lastMatched;
+
+			// check each character sequentially...
+			while (!done && matches.length > 0) {
+				var curChar;
+				// of every potential match...
+				for (var i = 0; i < matches.length; i++) {
+					// until either one of the matches isn't long enough...
+					if (matches[i].name.length-1 < curCharNum) {
+						done = true;
+						lastMatched = curCharNum-1;
+					}
+					// (use first match as a reference)
+					if (i == 0) {
+						curChar = matches[i].name.charAt(curCharNum);
+					}
+					// or the character doesn't match.
+					else if (curChar != matches[i].name.charAt(curCharNum)) {
+						done = true;
+						lastMatched = curCharNum-1;
+					}
+				}
+				curCharNum++;
+			}
+			return lastMatched;
+		}
+
+		function replace_match(input, matched, replacement, type)
+		{	
+			// globals: cursor_location
+			var in1 = input.substring(0, cursor_location - matched.length);
+			var in2 = input.substring(cursor_location - matched.length);
+		
+			var extra = "";
+			var extra_len = 0;
+			if (type) {
+				if (type == "function") {
+					extra = "()";
+					extra_len = 1;
+				} else if (type == "Array") {
+					extra = "[]";
+					extra_len = 1;
+				}
+			}
+			
+			cursor_location += (replacement.length - matched.length) + extra_len;
+			return in1 + in2.replace(matched, replacement + extra);
+		}
+		
+		function clear_autocomplete()
+		{
+			if (autocomplete_results.firstChild)
+				autocomplete_results.removeChild(autocomplete_results.firstChild);
+		}
+		
+		function deep_typeof(obj)
+		{
+			var type = typeof obj;
+			if (type == "object" && obj && obj.constructor) {
+				switch (obj.constructor) {
+					case Array:  return "Array";
+					case String: return "String";
+					case Number: return "Number";
+					case Date:   return "Date";
+					case RegExp: return "RegExp";
+				}
+			}
+			return type;
+		}
+		
+		function paste()
+		{
+			hidden_input.value = "";
+			hidden_input.focus();
+			
+			// "wait" for the paste to occur (by performing a timeout)
+			
+			window.setTimeout(function() {
+			    // we don't have multiline input yet, so collapse newlines and hope all lines are semicolon terminated...
+		        var pasted = hidden_input.value.replace(/\n/g, " ");
+    		    hidden_input.value = "";
+
+    			input = input.substring(0, cursor_location) + pasted + input.substring(cursor_location);
+    			cursor_location += pasted.length;
+
+    		    update_input();
+
+    			hidden_input.blur();
+    		}, 0);
+		}
+
+		function keyhandler(e) 
+		{
+		    var e = e || window.event;
+		    
+		    last_keypress = new Date();
+			
+			// HACK to prevent the second tab event from clearing autocompletion
+			if (e.keyCode != 9)
+			    clear_autocomplete();
+			
+			if (e.type == "keypress") {
+			    if (e.metaKey) {
+			        if (e.charCode == 107) {                                // command K
+			            clear();
+			            return;
+			        }
+    			    if (e.charCode == 118) {                                // command V
+    			        paste();
+        				return;
+    			    } else {
+        				return;
+    			    }
+    			}
+    			else if (e.ctrlKey) {
+    				if (e.charCode == 1 || e.charCode == 97) {			    // control A
+    					cursor_location = 0;
+    				} else if (e.charCode == 3 || e.charCode == 99) {	    // control C
+    					input = "";
+    				} else if (e.charCode == 5 || e.charCode == 101) {	    // control E
+    					cursor_location = input.length;
+    				} else if (e.charCode == 22) {                          // control V
+            			paste();
+        				return;
+            		} else {
+            		    return;
+            		}
+    			}
+    			// printable characters must come first since some key codes conflict between Safari and Firefox
+    			else if (e.charCode >= 32 && e.charCode <= 126) { // printable
+    				input = input.substring(0, cursor_location) + String.fromCharCode(e.charCode) + input.substring(cursor_location);
+    				cursor_location++;
+    				update_autocomplete(false);
+    			}
+    			else if (e.keyCode == 8 || e.keyCode == 92) { // backspace
+    				if (cursor_location > 0) {
+    					// get the input string with the character at cursor_location removed and move cursor_location
+    					input = input.substring(0, cursor_location-1) + input.substring(cursor_location);
+    					cursor_location--;
+    				}
+    				update_autocomplete(false);
+    			}
+    			else if (e.keyCode == 3 || e.keyCode == 13) { // enter, return
+    				execute_input();
+    			}
+    			else {
+    				return;
+    			}
+    		}	
+    		else if (e.type == "keydown") {
+    		    
+	    	    if (e.metaKey) {
+	    	        return;
+    			}
+    			else if (e.ctrlKey) {
+    			    return;
+			    }
+    		    else if ((e.keyCode == 63232 || e.keyCode == 38) && hist_num < hist.length) { // up arrow
+    				if (hist_num == 0) input_saved = input;
+    				hist_num++;
+    				input = hist[hist.length-hist_num];
+    				cursor_location = input.length;
+    			}
+    			else if ((e.keyCode == 63233 || e.keyCode == 40) && hist_num > 0) { // down arrow
+    				hist_num--;
+    				input = hist_num ? hist[hist.length-hist_num] : input_saved
+    				cursor_location = input.length;
+    			}
+    			else if ((e.keyCode == 63234 || e.keyCode == 37) && cursor_location > 0) { // left arrow
+    				cursor_location--;
+    			}
+    			else if ((e.keyCode == 63235 || e.keyCode == 39) && cursor_location < input.length) { // right arrow
+    				cursor_location++;
+    			}
+    		    else if (e.keyCode == 9) { // tab
+    				update_autocomplete(true);
+    			}
+    			else {
+    			    return;
+    			}
+    		}
+
+			e.preventDefault();
+			e.stopPropagation();
+				
+			update_input();
+		}
+		
+		function emitElement(element) {
+		    output(outputForObject(element));
+    		ans = element;
+		}
+
+		function getRect(obj) {
+        	var w = h = x = y = 0;
+		    if (obj.offsetParent) {
+        	    w = obj.offsetWidth;
+        	    h = obj.offsetHeight;
+		        do {
+    			    x += obj.offsetLeft;
+    			    y += obj.offsetTop;
+		        } while (obj = obj.offsetParent);
+		    }
+			return {x: x, y: y, w: w, h: h};
+        }
+		
+		function highlightElement(element) {
+		    var p = getRect(element);
+		    
+		    highlight.style.top = p.y + "px";
+    		highlight.style.left = p.x + "px";
+        	highlight.style.width = p.w + "px";
+        	highlight.style.height = p.h + "px";
+		}
+		
+		function clearHighlight() {
+		    highlight.style.top = "-100px";
+        	highlight.style.height = "0px";
+		}
+		
+		function outputForObject(object) {
+		    var output;
+		    
+            if (object.offsetTop != undefined) {
+                output = document.createElement("span");
+                output.className = "domlink";
+                
+                (function (target, element) {
+                    target.addEventListener("mouseover", function() { highlightElement(element); }, false);
+                    target.addEventListener("mouseout",  function() { clearHighlight(); },          false);
+                    target.addEventListener("click",     function() { emitElement(element); },      false);
+                })(output, object);
+                
+                output.appendChild(document.createTextNode(String(object)));
+            }
+            else if (object.constructor == NodeList) {
+                output = document.createElement("span");
+                output.appendChild(document.createTextNode("["));
+                for (var i = 0; i < object.length; i++) {
+                    output.appendChild(outputForObject(object[i]));
+                    if (i != object.length-1)
+                        output.appendChild(document.createTextNode(", "));
+                }
+                output.appendChild(document.createTextNode("]"));
+            } else {
+                output = document.createTextNode(String(object));
+            }
+            return output;
+		}
+		
+		function execute_input()
+		{
+			hist.push(input);
+			
+			println("> " + input);
+			try {
+				ans = evalInContext(input);
+			} catch (err) {
+				ans = err;
+			}
+			
+			var handled = false;
+			if (ans != undefined) {
+                output(outputForObject(ans));
+			}
+			
+			input = "";
+			hist_num = 0;
+			cursor_location = 0;
+		}
+		
+		function update_autocomplete(replace) {
+		    if (window.disableAutocomplete)
+		        return;
+		        
+			var param1, param2;
+			var match_compare = function (a, b) {
+				if (a[param1] < b[param1])
+					return -1;
+				if (a[param1] > b[param1])
+					return 1;
+				if (a[param2] < b[param2])
+					return -1;
+				if (a[param2] > b[param2])
+					return 1;
+				return 0;
+			}
+			
+			clear_autocomplete();
+
+			// Objective-J autocomplete:			
+			var objj_matches = [];
+			
+			var objj_obj;
+			if (typeof(window_context.objj_preprocess) != "undefined") {
+				var objj_match = input.substring(0, cursor_location).match(/\[[\w]+[\s]+[\w]*$/);
+				if (objj_match) {
+					var parts = objj_match[0].substring(1).split(" ");
+					objj_obj_name = parts[0];
+					objj_match_string = (parts.length > 1) ? parts[1] : "";
+					
+					try {
+						objj_obj = evalInContext(parts[0]);
+						var isa = objj_obj.isa;
+						var depth = 0;
+						while (isa) {
+							for (var name in isa.methods.buckets)
+								if (name.indexOf(objj_match_string) == 0)
+									objj_matches.push({ name: name, type: isa.name, depth: depth });
+							isa = isa.super_class;
+							depth++;
+						}
+					} catch (err) {
+						objj_obj = null;
+					}
+				}
+			}
+			
+			// JavaScript autocomplete:
+			var js_matches = [];
+			
+			var js_match_tmp = input.substring(0, cursor_location).match(/[\w][\w\.\$\(\)\[\]\"\']*$/);
+			var js_match = (js_match_tmp) ? js_match_tmp[0] : "";
+			var js_obj_name     = js_match.substring(0, js_match.lastIndexOf("."));
+			var js_match_string = js_match.substring(js_match.lastIndexOf(".")+1);
+			
+			var js_obj = null;
+			if (js_match.indexOf(".") < 0) {
+				js_obj = window_context; // global
+			} else {
+				try {
+					js_obj = evalInContext(js_obj_name);
+				} catch (err) {
+					js_obj = null;
+				}
+			}
+			if (js_obj)
+				for (var name in js_obj) {
+				    try {
+    					if (name.indexOf(js_match_string) == 0)
+    						js_matches.push({ name: name, type: deep_typeof(js_obj[name]) });
+				    } catch (e) {
+				        //console.log("Error but continuing: " + e + " ("+name+")");
+				    }
+				}
+			
+			var matches, match_string;
+			// Give Objective-J priority
+			if (objj_obj) {
+				match_string	= objj_match_string;
+				matches			= objj_matches;
+				param1			= "depth";
+				param2			= "name";
+			} else {
+				match_string	= js_match_string;
+				matches			= js_matches;
+				param1			= "type";
+				param2			= "name";
+			}
+			
+			// Common to both JavaScript and Objective-J:
+			matches = matches.sort(match_compare);
+			
+			if (matches.length > 0) {
+				var autocomplete_list = document.createElement("ul");
+				autocomplete_list.setAttribute("id", "autocomplete-list");
+				
+				for (var i = 0; i < matches.length; i++) {
+				
+					try {
+						var autocomplete_item = document.createElement("li");
+						autocomplete_item.prop_name = matches[i].name;
+						autocomplete_item.prop_type = matches[i].type;
+                    	
+						autocomplete_item.addEventListener("click", function(e) {
+							input = replace_match(input, match_string, e.target.prop_name, e.target.prop_type);
+							update_input();
+							clear_autocomplete();
+						}, false);
+                    	
+						autocomplete_item.appendChild(document.createTextNode(matches[i].name + " ("+ matches[i].type +")"));
+						
+						autocomplete_list.appendChild(autocomplete_item);
+					} catch(err) {
+					}
+				}
+				
+				if (matches.length > 0) {
+					if (matches.length > 1 || !replace)
+						autocomplete_results.appendChild(autocomplete_list);
+					
+					if (replace) {
+						var num_matching_chars = matching_chars(matches);
+						var replacement = matches[0].name.substring(0, num_matching_chars+1);
+						
+						var type = (matches.length == 1) ? matches[0].type : null;
+						input = replace_match(input, match_string, replacement, type);
+						
+						match_string = replacement; // hackish: update so subsequent replacement work (cause of that closure crap)
+					}
+				}
+			}
+		}
+		
+		function update_input()
+		{
+            while (beginning.firstChild)
+                beginning.removeChild(beginning.firstChild);
+            while (cursor.firstChild)
+                cursor.removeChild(cursor.firstChild);
+            while (end.firstChild)
+                end.removeChild(end.firstChild);
+            
+            beginning.appendChild(document.createTextNode(input.substring(0, cursor_location)));
+            cursor.appendChild(document.createTextNode((cursor_location < input.length) ? input.charAt(cursor_location) : " "));
+            end.appendChild(document.createTextNode(input.substring(cursor_location+1)));
+            
+			var top = document.defaultView.getComputedStyle($("console-history"), null).getPropertyValue("height");
+			var top_val = parseInt(top) - 100; // - (innerHeight/2);
+			scrollTo(0, top_val);
+		}
+		
+		print = function(line) { console_history.appendChild(document.createTextNode(line)); }
+	    println = function(line) { console_history.appendChild(document.createTextNode(line + "\n")); }
+	    
+        console.error   = println;
+        console.warn    = println;
+        console.log     = println;
+        console.info    = println;
+        console.debug   = println;
+	    
+		function output(element) { console_history.appendChild(element); console_history.appendChild(document.createTextNode("\n")) }
+	    
+		var window_context = window.opener || window,
+		    input = "",
+		    input_saved = "",
+		    input_multi = "",
+		    hist = [],
+		    flags = [],
+		    cursor_location = 0,
+		    hist_num = 0,
+            
+		    console_history			= $("console-history"),
+		    console_input 			= $("console-input"),
+		    autocomplete_results 	= $("autocomplete-results"),
+		    
+            beginning               = $("input-beginning"),
+            cursor                  = $("cursor"),
+            end                     = $("input-end"),
+		    
+		    hidden_input            = $("hidden-input");
+		
+		hidden_input.value = "";
+		
+		window.addEventListener("keydown", keyhandler, false);
+		window.addEventListener("keypress", keyhandler, false);
+		
+		var highlight = window_context.document.createElement("div");
+		
+		window_context.document.body.appendChild(highlight);
+		highlight.style.position        = "absolute";
+		highlight.style.top             = "-100px";
+		highlight.style.right           = "0px";
+		highlight.style.backgroundColor = "rgba(255, 0, 0, 0.25)";
+		highlight.style.zIndex          = "1000";
+		
+		// History cookie storage
+		try {	
+		    hist = eval(decodeURIComponent(document.cookie.match(/consolehistory=([^;]*)/)[1]));
+	    } catch (e) {
+	        hist = [];
+	    }
+	    if (!hist || hist.constructor != Array)
+	        hist = [];
+	        
+		window.addEventListener("unload", function() {
+		    var json = '[';
+		    for (var i = 0; i < hist.length && json.length < 2048; i++) {
+		        json += '"' + hist[i].replace(/"/g, '\\"').replace(/\\/g, '\\\\') + '",';
+		    }
+		    json.substring(0, json.length-2);
+		    json += ']';
+		    
+		    document.cookie = "consolehistory="+encodeURIComponent(json)+";";			    
+		}, false);
+		
+		var last_keypress = new Date();
+		
+		// Blink cursor
+		cursor.setAttribute("show", "yes");
+		window.setInterval(function() {
+			cursor.setAttribute("show", (cursor.getAttribute("show") == "yes" && (new Date() - last_keypress) > 750) ? "no" : "yes");
+		}, 500);
+		
+		var help = "\n        Javascript Interactive Console\n\n" +
+				"    - the right, left, and backspace keys are used to edit the current line\n" +
+				"    - the up and down arrow keys navigate through the previous command history\n" +
+				"    - \"ans\" gives the result of the previously evaluted expression\n" +
+				"    - \"println(string)\" and \"print(string)\" print a string with or without a newline appended, respectively\n" +
+				"    - \"clear()\" clears the screen\n" +
+				"    - \"help\" displays this message\n\n";
+    }
+    
+	</script>
+</head>
+<body onload="_console();">
+
+<div class="console" id="console-history"></div>
+<div class="console" id="console-input"><span>&gt;&nbsp;</span><span id="input-beginning"></span><span id="cursor">&nbsp;</span><span id="input-end"></span></div>
+
+<div id="autocomplete-results"></div>
+<input type="text" id="hidden-input" />
+
+</body>
+</html>

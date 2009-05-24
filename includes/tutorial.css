@@ -1,0 +1,307 @@
+
+
+.highlight, cite {
+	color:				#005bb1;
+	font-style: 		normal;
+}
+
+var {
+    font-style:         normal;
+    font-family:        Monaco, sans-serif;
+    color:              #212121;
+}
+
+.contentsection .feedback
+{
+	background-color: 	#e9e9e9;
+}
+
+.contentcontainer {
+	width:				652px;
+	margin:				30px auto 0px auto;
+}
+
+.contentsection {
+	margin-top: 		60px;
+	width: 				600px;
+	background-color: 	rgb(255, 251, 243);
+	border:				1px solid #bcbcbc;
+	line-height: 		21px;
+	padding-top: 		21px;
+	padding-bottom: 	21px; 
+	position:           relative;
+}
+
+.contentsection ul
+{
+    list-style-type: none;
+}
+
+.contentsection ul li
+{
+}
+
+.contentsection h3, .contentsection h4 {
+	font-family: 		"Helvetica Neue", "Lucida Grande", sans-serif;
+	font-weight: 		bold;
+	color: 				rgb(153, 0, 34);
+	padding-left: 		21px;
+	float: 				left;
+	margin-top: 		0px;
+	width: 				190px;
+	font-size: 			16px;
+}
+
+.cl
+{
+	clear: 				both;
+}
+
+.contentsection h4 {
+	color: 				#656565;
+	margin-bottom:      12px;
+}
+
+.codesection h3, .codesection h4 {
+	float:				none;
+	width: 				auto;
+	margin-top:         10px;
+}
+
+
+/* basic table */
+
+.contentsection table {
+	border-collapse: 	collapse;
+	font-size: 			12px;
+	margin-left: 		auto;
+	margin-right: 		21px;
+	color: 				#636363;
+}
+
+.codesection table {
+	margin-left: 		21px;
+}
+
+.contentsection th {
+	text-align: 		left;
+	padding: 			8px 12px 8px 12px;
+	color: 				#454545;
+	background-color:	#e9e9e9 !important;
+	background-image: 	url("/images/layout/column-background.png");
+	background-repeat: 	repeat-x;
+}
+
+.contentsection tr.header {
+	border: 			1px solid #bebebe;
+}
+
+.contentsection td {
+	background-color: 	#eeeeee;
+	border: 			1px solid #bebebe;
+	padding: 			8px 12px 8px 12px;
+}
+
+/*.contentbody {
+	margin-left:		190px;
+	color: 				#636363;
+	font-size: 			12px;
+	padding-right: 		20px;
+	padding-left: 		21px;
+}
+*/
+div.credits {
+	margin-left:		0px;
+	color: 				#636363;
+	font-size: 			11px;
+	padding: 			10px 20px 20px 211px;
+	border-top: 		1px dashed #c0c0c0;
+}
+
+.codesection .contentbody {
+	margin-left:		0px;
+	padding-left: 		21px;
+	padding-right: 		21px;
+}
+
+.contentbody {
+	margin-left:		190px;
+	color: 				rgb(77, 64, 43);
+	font-size: 			12px;
+	padding-right: 		20px;
+	padding-left: 		21px;
+}
+
+.contentbody em {	
+ 	font-style: 		normal;
+	color: 				black;
+}
+
+.codeblock {
+	color:				#424242;
+	background-color: 	rgb(255, 254, 252);
+	border-top: 		1px solid #d5d5d5;
+	border-bottom: 		1px solid #d5d5d5;
+	padding: 			11px 21px;
+	font-size: 			12px;
+	font-family: 		Monaco, monospace;
+	white-space:		pre;
+	margin-bottom: 		42px;
+	line-height:		18px;
+}
+
+.singlelinecode
+{
+    margin-bottom:      12px;
+}
+
+
+/* blocks which have code on the left and
+   and a supporting diagram on the right */
+
+.codeimagecombo {
+	background-color: 	rgb(255, 254, 252);
+	border-top: 		1px solid #d5d5d5;
+	border-bottom: 		1px solid #d5d5d5;	
+	padding:			21px 21px 0px 21px;
+	margin-bottom: 		42px;
+}
+
+.codeimagecombo .codeblock {
+
+    /* since the code is embedded, we need to
+    make the formatting a bit more tame */
+	
+	background-color: 	rgb(255, 254, 252);
+	border-top: 		none;
+	border-bottom: 		none;
+	padding: 			0px;
+	margin: 			0px;
+	float: 				left;
+	width: 				298px;
+}
+
+.codeimagecombo img {
+
+	float:				right;
+}
+
+
+
+.codeheader {
+	background-color: 	#f0f0f0;
+	border-top: 		1px solid #b9b9b9;
+	padding: 			4px 21px 4px 21px;
+	font-size: 			13px;
+	font-family: 		Monaco, monospace;
+}
+
+.unixbox
+{
+	width:				400px;
+	height:				150px;
+	padding:			40px 39px 30px 25px;
+	background-image:	url("/images/layout/terminal-bg.png");
+	background-repeat:	no-repeat;
+	font-family:		Monaco, monospace;
+	font-size:			10px;
+	color:				black;
+	line-height:		14px;
+	white-space:		pre;	
+	margin-left:		auto;
+	margin-right:		auto;
+}
+
+.hintbox
+{
+	width:				200px;
+	float:				right;
+	border:				1px solid #e5e5e5;
+	margin:				0px -154px 0px 42px;
+	padding:			12px;
+	font-size:			11px;
+}
+
+.featuredimagebox
+{
+	background-color:	rgb(255, 254, 252);
+	border:				1px solid #d5d5d5;
+	border-left:		none;
+	border-right:		none;
+	text-align:			center;
+	margin-bottom:		21px;
+}
+
+.pagefold
+{
+    position:           absolute;
+    top:                -1px;
+    right:              -1px;
+    width:              69px;
+    height:             71px;
+    font-size:          21px;
+    background-image:   url('../images/layout/pagefold.png');
+    background-repeat:  no-repeat;
+    text-align:         right;
+	font-family: 		"Helvetica Neue", "Lucida Grande", sans-serif;
+	font-weight: 		bold;
+	color: 				rgb(153, 0, 34);
+}
+
+.pagefold span
+{
+    padding-right:      12px;
+    line-height:        42px;
+}
+
+.pagefold span.doubledigit {
+    padding-right:      8px;
+}
+
+.headingnumber {
+    color:              #aeaeae;
+    padding-left:       0.21em;
+}
+
+div.overview
+{
+    margin-left:		0px;
+	color: 				#636363;
+	font-size: 			11px;
+	border-top: 		1px dashed #c0c0c0;
+}
+
+span.old-code
+{
+    color:				#9b9b9b;
+}
+
+span.keyword
+{
+    color:              rgb(25,6,253);
+}
+
+span.old-code span.keyword
+{
+    color:              inherit;
+}
+
+span.selector
+{
+    color:              #005bb1;
+}
+
+span.old-code span.selector
+{
+    color:              inherit;
+}
+
+span.comments
+{
+    color:              #236e26;
+}
+/*
+span.string
+{
+    color:              
+}*/
