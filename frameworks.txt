@@ -1,0 +1,7 @@
+
+frameworks = [
+	"learn/console/NewApplication/Frameworks",
+	"learn/demos/Frameworks",
+	"learn/tutorials/scrapbook-tutorial-1/Scrapbook/Frameworks",
+	"learn/tutorials/scrapbook-tutorial-2/Scrapbook-2/Frameworks"
+]

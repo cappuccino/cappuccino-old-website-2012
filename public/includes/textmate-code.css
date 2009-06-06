@@ -1,0 +1,227 @@
+/* Stylesheet generated from TextMate theme
+ *
+ * Dawn
+ * Dawn
+ *
+ */
+
+/* Mostly to improve view within the TextMate HTML viewer */
+body {
+	margin: 0;
+	padding: 0;
+}
+
+pre.textmate-source {
+margin: -10px -22px 0px 0px;
+padding: 10px;
+	font-family: Monaco, monospace;
+	font-size: 11px;
+	line-height: 1.3em;
+	word-wrap: break-word;
+	
+	border: 2px solid #c5c5c5;
+	white-space: pre;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -o-pre-wrap;
+}
+
+pre.textmate-source.dawn {
+	color: #080808;
+	background-color: #F9F9F9;
+}
+
+pre.textmate-source .linenum {
+	width: 75px;
+	padding: 0.1em 1em 0.2em 0;
+	color: #888;
+	background-color: #eee;
+}
+pre.textmate-source.dawn span {
+   padding-top: 0.2em;
+   padding-bottom: 0.1em;
+}
+pre.textmate-source.dawn ::selection {
+	background-color: rgba(39, 95, 255, 0.30);
+}
+/* Comment */
+pre.textmate-source.dawn .comment {
+	color: #5A525F;
+	font-style: italic;
+}
+
+/* Constant */
+pre.textmate-source.dawn .constant {
+	color: #811F24;
+/*	font-weight: bold;*/
+}
+
+/* Entity */
+pre.textmate-source.dawn .entity {
+	color: #BF4F24;
+}
+
+/* Keyword */
+pre.textmate-source.dawn .keyword {
+	color: #794938;
+}
+
+/* Storage */
+pre.textmate-source.dawn .storage {
+	color: #A71D5D;
+	font-style: italic;
+}
+
+/* String */
+pre.textmate-source.dawn .string .| .punctuation_definition_string {
+	color: #0B6125;
+}
+
+/* Support */
+pre.textmate-source.dawn .support {
+	color: #691C97;
+}
+
+/* Variable */
+pre.textmate-source.dawn .variable {
+	color: #234A97;
+}
+
+/* Punctuation.separator */
+pre.textmate-source.dawn .punctuation_separator {
+	color: #794938;
+}
+
+/* Invalid – Deprecated */
+pre.textmate-source.dawn .invalid_deprecated {
+	color: #B52A1D;
+	font-style: italic;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+/* Invalid – Illegal */
+pre.textmate-source.dawn .invalid_illegal {
+	color: #F8F8F8;
+	font-style: italic;
+	text-decoration: underline;
+	background-color: #B52A1D;
+}
+
+/* String embedded-source */
+pre.textmate-source.dawn .string .source {
+	color: #080808;
+	background-color: rgba(111, 139, 186, 0.15);
+}
+
+/* String constant */
+pre.textmate-source.dawn .string .constant {
+	color: #696969;
+	font-weight: bold;
+}
+
+/* String variable */
+pre.textmate-source.dawn .string .variable {
+	color: #234A97;
+}
+
+/* String.regexp */
+pre.textmate-source.dawn .string_regexp {
+	color: #CF5628;
+}
+
+/* String.regexp.«special» */
+pre.textmate-source.dawn .string_regexp_character-class, pre.textmate-source.dawn .string_regexp .constant_character_escaped, pre.textmate-source.dawn .string_regexp .source_ruby_embedded, pre.textmate-source.dawn .string_regexp .string_regexp_arbitrary-repitition {
+	color: #CF5628;
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* String.regexp constant.character.escape */
+pre.textmate-source.dawn .string_regexp .constant_character_escape {
+	color: #811F24;
+	font-weight: bold;
+}
+
+/* Embedded Source */
+pre.textmate-source.dawn .text .source {
+	background-color: rgba(111, 139, 186, 0.15);
+}
+
+/* Support.function */
+pre.textmate-source.dawn .support_function {
+	color: #693A17;
+}
+
+/* Support.constant */
+pre.textmate-source.dawn .support_constant {
+	color: #B4371F;
+}
+
+/* Support.variable */
+pre.textmate-source.dawn .support_variable {
+	color: #234A97;
+}
+
+/* Markup.list */
+pre.textmate-source.dawn .markup_list {
+	color: #693A17;
+}
+
+/* Markup.heading */
+pre.textmate-source.dawn .markup_heading .| .markup_heading .entity_name {
+	color: #19356D;
+	font-weight: bold;
+}
+
+/* Markup.quote */
+pre.textmate-source.dawn .markup_quote {
+	color: #0B6125;
+	font-style: italic;
+	background-color: rgba(187, 187, 187, 0.19);
+}
+
+/* Markup.italic */
+pre.textmate-source.dawn .markup_italic {
+	color: #080808;
+	font-style: italic;
+}
+
+/* Markup.bold */
+pre.textmate-source.dawn .markup_bold {
+	color: #080808;
+	font-weight: bold;
+}
+
+/* Markup.underline */
+pre.textmate-source.dawn .markup_underline {
+	color: #080808;
+	text-decoration: underline;
+}
+
+/* Markup.link */
+pre.textmate-source.dawn .markup_link {
+	color: #234A97;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+/* Markup.raw */
+pre.textmate-source.dawn .markup_raw {
+	color: #234A97;
+	background-color: rgba(187, 187, 187, 0.19);
+}
+
+/* Markup.deleted */
+pre.textmate-source.dawn .markup_deleted {
+	color: #B52A1D;
+}
+
+/* Meta.separator */
+pre.textmate-source.dawn .meta_separator {
+	color: #19356D;
+	font-weight: bold;
+	background-color: #DCDCDC;
+}
+
+
