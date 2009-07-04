@@ -104,7 +104,9 @@ include('../includes/header.php');
 Server: irc.freenode.net
 Room:   #cappuccino</a>
 </code>
-<p>Or <a href="http://embed.mibbit.com/?server=irc.freenode.com&amp;channel=%23cappuccino" target="_blank">join the chat now</a> in your browser.</p>
+<p>Join the chat below, or <a href="http://webchat.freenode.net/?channels=cappuccino" target="_blank">in a separate window</a>.</p>
+
+<iframe src="http://webchat.freenode.net/?channels=cappuccino" width="647" height="400"></iframe>
 
             </div>
             
