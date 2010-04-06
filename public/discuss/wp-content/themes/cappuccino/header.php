@@ -11,8 +11,7 @@ $navigationLinks["Discuss"] = array( "title" => "Discuss", "url" => $root."discu
 $navigationLinks["Contribute"] = array( "title" => "Contribute", "url" => $root."contribute/" );
 $navigationLinks["Download"] = array( "title" => "Download", "url" => $root."download/" );    
 
-echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n".
-     "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">";
+echo "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">";
      
 ?>
 

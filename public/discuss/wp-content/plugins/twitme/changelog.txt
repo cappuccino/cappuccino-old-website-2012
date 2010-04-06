@@ -1,0 +1,73 @@
+Version 1.5.2
+     - Fixed the activation bug that accoured in version 1.5.1
+
+Version 1.5.1
+     - Fixed the dutch Translation.
+     - Special chars are now allowed in messages and login information.
+     - Removed prototype.js as it colided with jquery.
+     - Fixed the notify Followers bug because it always did send messages to Followers enabled or not and with every post.
+     - Robert fixed the German and American language as some things where missing.
+     - The userAgent now is "Twitme for wordpress" (in Twitclass)
+     - Fixed some missing tekst in version 1.5 (Settings:Press save to save your setttings).
+     - Fixed a bug where auto post to Twitter could be turened off but this was ignored.
+     - Version 1.5.1 will not support the Italian language as i could not reach sasa
+     - Sasa fixed the Italian translation
+
+Version 1.5
+    - You can now send messages from your Twitme manage section to your followers.
+    - Fixed a bug where "Send notification to followers" where on/off didnt work
+    - Added the option to turn automaticly sending to Twitter on or off.
+    - After saving the settings you will automaticly scroll backup to the top of the page.
+    - Your perma links now will be used (if set) on twitter so no more ugly ?p= syntax
+    - When you press "Test now" you will be taken to the top where you can see the test results.
+    - Added a donate button in the settings page.
+    - Added 2 new Tags %POSTTITLE% and %POSTURL%.
+    - On Twitter you will now see (behind your message) " from Twitme for WordPress"
+    - Fixed a bug for new Twitme users in_array() on line 97 in /Users/rave/Sites/wordpress/wp-content/plugins/twitme/pages/mannage.php
+    - Fixed a bug that was also related to new users, some options did not have a default value.
+	- Added spanish and american translation.
+	
+Version 1.4
+    - Fixed the double post bug that always has been in Twitme.
+    - Added dutch translation.
+    - Added a new logo created by Dustin Crisman (TwItCh on irc.freenode.net #css)
+    - Added a link to the users Twitter page under the submit update block.
+    - Added the ability to resend a post to Twitter.
+    - Added the german translation Thanks to Andre Kemena
+    - Added the Italian translation Thanks to Sasa.
+    - Updated the style of the readme.txt file.
+    - Fixed a bug in Manage Twits where not submitted posts showed up in the send to Twitter List.
+    - You can now resend your blog post to Twitter if you want to
+    - Updated the style of the readme file
+
+Version 1.3.1
+  - Followers can now be deleted
+  - Username as password are being displayed correctly in the settings form now.
+  - Fixed: foreach() in /../../../wp-content/plugins/twitme/pages/mannage.php on line 166 Thanks to Robert
+  - The manage page send to update style bug fix, windows now fixed next to each other also on Chrome and Firefox 3.0
+  - Fixed  undefined function notify_twitter() in /../../../wp-content/plugins/twitme/pages/mannage.php on line 22 Thanks to Robert
+  - Fixed typo`s in the readme.txt file.
+  - Fixed a bug in the login where failing authorization would not be detected.
+
+Version 1.3
+  - Added an option to send new followers a thank you message
+  - Added a button on the Mannage page that can be used to submit all posts that are NOT on twitter yet.
+  - Fixed the style of the Followers list, the image is more centered now.
+  - Users can now send messages to twitter from the Mannage page.
+  - Added date / author / comment count to the send messages.
+
+Version 1.2
+ - Fixes an error because 1.1 was permaturly released sorry !!
+ - The debug mode is now off (was a bug with version 1.1)
+ - Once again sorry for the wrong release. 
+ - Fixed the template method.
+
+
+Version 1.1
+ - Added json_encode support for php version prior to 5.2
+ - Added support to request the followers, they are now visible on the manage page
+ - Added scrolling support trough your followers.
+
+
+Version 1.0
+ - First release

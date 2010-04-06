@@ -1,6 +1,6 @@
 	<div id="subNavigation">
 		<ul>
-		
+		  <li>
             <h3>Discuss</h3>
                 <ul>
                     <?php
@@ -26,7 +26,7 @@
                     <li><a href="/discuss/list.php">Mailing List &amp; IRC</a></li>
                     <li><a href="/discuss/faq.php">Frequently Asked Questions</a></li>
                 </ul>
-
+            </li>
 			<?php 	/* Widgetized sidebar, if you have the plugin installed. */
 					if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
 

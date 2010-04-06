@@ -1,0 +1,20 @@
+<client>
+	<name>1.4</name>
+	<version></version>
+	<author>
+		<name>Johnny Mast</name>
+		<email>info@phpvrouwen.nl</email>
+		<twitter>phpvrouwen</twitter>
+	</author>
+	<url>http://www.phpvrouwen.nl/twitter</url>
+	<twitter>phpvrouwen</twitter>
+	<description><![CDATA[
+		This plugin allows you to automatically post your new posts on the twitter website. 
+		This is good because for example the ipod and iphone for example have a large amount of twitter clients to pick from. 
+		Your blog posts will arrive to people while they are walking the streets.
+		
+		Author url: http://www.phpvrouwen.nl/
+
+	]]>
+	</description>
+</client>

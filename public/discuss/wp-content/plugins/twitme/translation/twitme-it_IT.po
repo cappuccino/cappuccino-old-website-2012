@@ -1,0 +1,285 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Twitme 1.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-07 20:18+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Johnny Mast <Info@phpvrouwen.nl>\n"
+"Language-Team: Twitme translation team <info@phpvrouwen.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+": \n"
+"X-Poedit-SearchPath-0: /Users/rave/Sites/wp/wp-content/plugins/twitme"
+
+#: twitFilters.php:62
+#, php-format, php-format, php-format
+msgid " New Blog post %s%s"
+msgstr "Nuovo Blog post %s%s"
+
+#: twitme.php:33
+#, php-format
+msgid "New Blog Post on %BLOGNAME% you can find it here %POSTURL%"
+msgstr "Ce un nuovo blog post su %BLOGNAME% , puoi trovarlo qua %POSTURL%"
+
+#: twitme.php:34
+msgid "Thank you for following me."
+msgstr "Questi sono i vostri inseguitori"
+
+#: pages/settings.php:13
+#: twitMenus.php:29
+msgid "TwitMe Options"
+msgstr "TwitMe Opzioni"
+
+#: twitMenus.php:34
+msgid "TwitsMe`s"
+msgstr "TwitMe"
+
+#: twitOptions.php:56
+msgid "Repost successful"
+msgstr "Repost effetuato con sucesso"
+
+#: twitOptions.php:68
+msgid "Logged in successfully"
+msgstr "Login effetuato con sucesso"
+
+#: twitOptions.php:70
+msgid "Error: could not login to Twitter."
+msgstr "Errore: Non e statto possibile logarsi nel Twitter."
+
+#: twitOptions.php:113
+msgid "Your Twitme settings are saved."
+msgstr "Le tue Twitme opzioni sono state salvate."
+
+#: twitSubmitall.php:69
+#, php-format
+msgid "Submitting <strong>%s</strong><br />"
+msgstr "Trasmissione <strong>%s</strong><br />"
+
+#: pages/mannage.php:73
+#, php-format
+msgid "Your message has been send to %s"
+msgstr "Il tuo mesaggio e stato inviato a %s"
+
+#: pages/mannage.php:134
+msgid "Posts that TwitMe has submitted to Twitter"
+msgstr "TwitMe postaggi che sono stati trasmessi al Twitter"
+
+#: pages/mannage.php:135
+msgid "On this page you will find the names of the posts that TwitMe has send over to Twitter."
+msgstr "Su questa pagina troverete i nomi dei post che TwitMe ha trasmesso al Twitter."
+
+#: pages/mannage.php:141
+msgid "Submit all"
+msgstr "Trasmetti tutto"
+
+#: pages/mannage.php:142
+#, php-format
+msgid "You have (%s) Post(s) that are not yet submitted to Twitter. You can press the <strong>submit all</strong> button to submit the stories that have not been posted to Twitter yet"
+msgstr "Avete (%s) Post(s) che non sono ancora stati trasmessi al Twitter. Potete premere il tasto<strong>trasmetti tutto</strong> per trasmettere gli post ancora non trasmessi al Twitter."
+
+#: pages/mannage.php:157
+msgid "No posts have been send and you have currently no posts to submit to Twitter"
+msgstr "Nessun post e stato trasmesso e voi non avete altri post per trasmettere alTwitter"
+
+#: pages/mannage.php:165
+msgid "No posts have been submitted YET. If you want to submit all available stories press the submit all button"
+msgstr "Non e stato trasmesso alcun post ancora. Se volete trasmettere tutti gli post disponibili premete il bottone trasmetti tutto."
+
+#: pages/mannage.php:180
+msgid "Post ID"
+msgstr "Post ID"
+
+#: pages/mannage.php:181
+msgid "Author"
+msgstr "Autore"
+
+#: pages/mannage.php:182
+msgid "Title"
+msgstr "Titolo"
+
+#: pages/mannage.php:183
+msgid "Comments"
+msgstr "Commenti"
+
+#: pages/mannage.php:184
+msgid "Date"
+msgstr "Data"
+
+#: pages/mannage.php:185
+msgid "Action"
+msgstr "Azione"
+
+#: pages/mannage.php:199
+msgid "Resend"
+msgstr "Ritrasmetti"
+
+#: pages/mannage.php:212
+msgid "Send an update to twitter"
+msgstr "Invia un agiornamento al twitter"
+
+#: pages/mannage.php:219
+#: pages/mannage.php:314
+msgid "140 chars remaining"
+msgstr "Ti rimangono ancora 140 caratteri"
+
+#: pages/mannage.php:220
+msgid "Your Twitter page"
+msgstr "La tua pagina Twitter"
+
+#: pages/mannage.php:221
+msgid "Send update"
+msgstr "Invia un agiornamento al twitter"
+
+#: pages/mannage.php:231
+msgid "No posts yet"
+msgstr "Nessun post"
+
+#: pages/mannage.php:260
+msgid "These are you followers"
+msgstr "Questi sono i vostri inseguitori"
+
+#: pages/mannage.php:269
+msgid "You have no followers yet"
+msgstr "Non avete nessun inseguitore"
+
+#: pages/mannage.php:309
+msgid "Message:"
+msgstr "Mesaggio:"
+
+#: pages/mannage.php:315
+msgid "Send Message"
+msgstr "Invia Mesaggio"
+
+#: pages/mannage.php:319
+msgid "you can close this window by pressing the close icon or press escape on your keyboard."
+msgstr "Potete chiudere questa finestra clickando sul icona oppure premendo ESC sulla vostra tastiera."
+
+#: pages/settings.php:17
+msgid "Note: "
+msgstr "Note:"
+
+#: pages/settings.php:18
+msgid ""
+"If the message sent to Twitter is longer then 140 chars (Twitters Max) then the plugin will automaticly switch to\n"
+"      \"Summary\" modes even if you have \"Template\" modes selected."
+msgstr ""
+"Se il mesaggio trasmesso al Twitter e piu lungo di 140 caratteri, il plugin automaticamente commutera su\n"
+"      \"Sommario\" modo anche se avete il modo \"Template\" selezionato."
+
+#: pages/settings.php:25
+msgid "Donate to Twitme"
+msgstr "Donate a Twitme"
+
+#: pages/settings.php:35
+msgid "Twitter Username"
+msgstr "Nome Utente Twitter"
+
+#: pages/settings.php:39
+msgid "Twitter Password"
+msgstr "Twitter Password"
+
+#: pages/settings.php:43
+msgid "Twitter Message"
+msgstr "Nome Utente Twitter"
+
+#: pages/settings.php:46
+msgid ""
+"You can alter this message \n"
+"         but leave the template tags in tackt !."
+msgstr ""
+"Potete modificare questo messaggio \n"
+"         pero lasciate gli tag degli esempi intatti !"
+
+#: pages/settings.php:48
+msgid "Allowed Tags:"
+msgstr "Tag Permessi:"
+
+#: pages/settings.php:61
+msgid "Enable Auto post"
+msgstr "Attiva l'Auto post"
+
+#: pages/settings.php:62
+msgid "If you turn this option off Twitme will not send the message automaticly any more (this option is turned on by default)"
+msgstr "Se disabilitate questa opzione, Twitme non inviera piu i mesaggi automaticamente (Questa opzione e attiva di default)"
+
+#: pages/settings.php:73
+#: pages/settings.php:95
+msgid "On"
+msgstr "Attivato"
+
+#: pages/settings.php:77
+#: pages/settings.php:100
+msgid "Off"
+msgstr "Disativato"
+
+#: pages/settings.php:82
+msgid "Use short urls"
+msgstr "Usa il sommario degli post"
+
+#: pages/settings.php:84
+msgid ""
+"You can enable this option if you want to shorten the urls in the twitter posts. (This option is turned off by default)\n"
+"        "
+msgstr ""
+"Potete attivare questa opzione se volete glu URL corti nei post di Twitter. (Questa opzione e attiva di default.)\n"
+"        "
+
+#: pages/settings.php:104
+msgid "Twitter Followers"
+msgstr "Avvisa gli nuovi inseguitori"
+
+#: pages/settings.php:105
+msgid "If desired send this messge to new Followers on twitter."
+msgstr "Se volete trasmetete questo messagio agli inseguitori nuovi su twitter."
+
+#: pages/settings.php:109
+msgid "Notify new Followers"
+msgstr "Avvisa gli nuovi inseguitori"
+
+#: pages/settings.php:120
+msgid "Yes"
+msgstr "Si"
+
+#: pages/settings.php:124
+msgid "No"
+msgstr "No"
+
+#: pages/settings.php:129
+msgid "Report method"
+msgstr "Metodo di rapporto"
+
+#: pages/settings.php:140
+msgid "Use message template"
+msgstr "Usa il messagio esempio"
+
+#: pages/settings.php:144
+msgid "Use Post summary"
+msgstr "Usa il sommario degli post"
+
+#: pages/settings.php:149
+msgid "Test now"
+msgstr "Testate adesso"
+
+#: pages/settings.php:150
+msgid "Save settings"
+msgstr "Salva gli settaggi"
+
+#: pages/settings.php:16
+#, php-format
+msgid "In order to make the connection between <em>%s</em> and Twitter we need your username and password for so that we can login into Twitter. It is wise to press the <em>test now</em> button so you are sure that your connection to Twitter will work well. Please dont forget to press the save settings button to store your settings. "
+msgstr "Per fare la conessione tra <em>%s</em> ed il Twitter abbiamo bisogno del vostro nome utente e della vostra password per poter fare il login nel Twitter. E oportuno premere il bottone <em>test</em> per essere certi che la connesione al Twitter funziona. Non dimenticatevi di salvare le impostazioni."
+
+#: twitFilters.php:81
+#, php-format
+msgid " New Blog post %s %s"
+msgstr "Nuovo Blog post %s %s"
+
+#: twitOptions.php:47
+msgid "The messages have been send to Twitter"
+msgstr "Il mesaggio e stato trasmesso al Twitter"
+
