@@ -13,14 +13,17 @@ include('../includes/header.php');
             </div>
             <div id="topRightDownloadContent">
                     <h1>Download Cappuccino</h1>
-                    <h3>Latest Version: 0.7 (May 20, 2009)</h3>
+                    <h3>Latest Version: 0.8 (April 6th, 2010)</h3>
                 <div>
                     <h2><a href="/starter">Starter Package</a></h2>
                     <p>Get started fast with Cappuccino and a new project template.</p>
                 </div>
-                <div>
-                    <h2><a href="/tools">Frameworks &amp; Tools</a></h2>
-                    <p>Dig deeper with the frameworks and build tools.</p>
+                <div style="font-size:90%;">
+                    <h2 style="font-size:150%;">Frameworks &amp; Tools</h2>
+                    <p>If you already have <strong>tusk</strong> installed:</p>
+                    <code style="padding-top:4px; padding-bottom:4px;">tusk install --force cappuccino</code>
+                    <p>Otherwise, there's a script included in the Starter package called <strong>bootstrap.sh</strong> which will download everything you need:</p>
+                    <code style="padding-top:4px; padding-bottom:4px;">Starter/bootstrap.sh</code>
                 </div>
             </div>
             <div style="clear:both;"></div>
@@ -40,9 +43,14 @@ git clone git://github.com/280north/cappuccino.git
 </code>
 <p>Learn more about <a href="/contribute">contributing</a>.</p>
 
+<h3>Nightly Builds</h3>
+<p>Every day we push pre-built copies of the framework to github. Read more about it on our <a href="http://cappuccino.org/nightly/">nightly builds</a> page.</p>
+
 <h3>Archived Versions</h3>
 <p>Looking for older versions of Cappuccino? You can find some of our latest releases below.</p>
 <ul>
+    <li><a href = "http://download.cappuccino.org/CappuccinoStarter-0.7.1.zip">Cappuccino Starter 0.7.1</a> and <a href = "http://download.cappuccino.org/CappuccinoTools-0.7.1.zip">Cappuccino Tools 0.7.1</a> (July 6th, 2009)</li>
+    <li><a href = "http://download.cappuccino.org/CappuccinoStarter-0.7.zip">Cappuccino Starter 0.7</a> and <a href = "http://download.cappuccino.org/CappuccinoTools-0.7.zip">Cappuccino Tools 0.7</a> (May 20th, 2009)</li>
     <li><a href = "http://download.cappuccino.org/CappuccinoStarter-0.6.zip">Cappuccino Starter 0.6</a> and <a href = "http://download.cappuccino.org/CappuccinoTools-0.6.zip">Cappuccino Tools 0.6</a> (December 10th, 2008)</li>
     <li><a href = "http://download.cappuccino.org/CappuccinoStarter-0.5.5.zip">Cappuccino Starter 0.5.5</a> and <a href = "http://download.cappuccino.org/CappuccinoTools-0.5.5.zip">Cappuccino Tools 0.5.5</a> (October 8th, 2008)</li>
     <li><a href = "http://download.cappuccino.org/CappuccinoStarter-0.5.1.zip">Cappuccino Starter 0.5.1</a> and <a href = "http://download.cappuccino.org/CappuccinoTools-0.5.1.zip">Cappuccino Tools 0.5.1</a> (September 13th, 2008)</li>
