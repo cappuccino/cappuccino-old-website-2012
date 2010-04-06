@@ -1,0 +1,19 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_c_p_color_picker_8j.html" title="AppKit/CPColorPicker.j" alt="" coords="5,83,165,111"/>
+<area shape="rect" id="node5" href="$_c_p_control_8j.html" title="AppKit/CPControl.j" alt="" coords="189,83,325,111"/>
+<area shape="rect" id="node7" href="$_c_p_cursor_8j.html" title="AppKit/CPCursor.j" alt="" coords="349,83,480,111"/>
+<area shape="rect" id="node9" href="$_c_p_drag_server_8j.html" title="AppKit/CPDragServer.j" alt="" coords="504,83,664,111"/>
+<area shape="rect" id="node11" href="$_c_p_flash_view_8j.html" title="AppKit/CPFlashView.j" alt="" coords="688,83,843,111"/>
+<area shape="rect" id="node13" href="$_c_p_image_8j.html" title="AppKit/CPImage.j" alt="" coords="867,83,995,111"/>
+<area shape="rect" id="node15" href="$_c_p_image_view_8j.html" title="AppKit/CPImageView.j" alt="" coords="1019,83,1176,111"/>
+<area shape="rect" id="node17" href="$_c_p_pasteboard_8j.html" title="AppKit/CPPasteboard.j" alt="" coords="1200,83,1360,111"/>
+<area shape="rect" id="node19" href="$_c_p_search_field_8j.html" title="AppKit/CPSearchField.j" alt="" coords="1384,83,1547,111"/>
+<area shape="rect" id="node21" href="$_c_p_split_view_8j.html" title="AppKit/CPSplitView.j" alt="" coords="1571,83,1717,111"/>
+<area shape="rect" id="node23" href="$_c_p_text_field_8j.html" title="AppKit/CPTextField.j" alt="" coords="1741,83,1888,111"/>
+<area shape="rect" id="node25" href="$_c_p_view_8j.html" title="AppKit/CPView.j" alt="" coords="1912,83,2032,111"/>
+<area shape="rect" id="node27" href="$_c_p_web_view_8j.html" title="AppKit/CPWebView.j" alt="" coords="2056,83,2203,111"/>
+<area shape="rect" id="node29" href="$_c_p_window_controller_8j.html" title="AppKit/CPWindowController.j" alt="" coords="2227,83,2424,111"/>
+<area shape="rect" id="node31" href="$_c_p_platform_8j.html" title="AppKit/Platform/CPPlatform.j" alt="" coords="2448,83,2643,111"/>
+<area shape="rect" id="node33" href="$_c_p_platform_string_8j.html" title="AppKit/Platform/CPPlatformString.j" alt="" coords="2667,83,2899,111"/>
+<area shape="rect" id="node35" href="$_c_p_platform_window_8j.html" title="AppKit/Platform/CPPlatformWindow.j" alt="" coords="2923,83,3165,111"/>
+</map>
