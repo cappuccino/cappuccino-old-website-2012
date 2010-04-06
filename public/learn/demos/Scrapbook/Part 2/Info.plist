@@ -5,12 +5,12 @@
 	<key>CPApplicationDelegateClass</key>
 	<string>AppController</string>
 	<key>CPBundleName</key>
-	<string>Lights Off</string>
+	<string>Scrapbook Part 2</string>
 	<key>CPPrincipalClass</key>
 	<string>CPApplication</string>
 	<key>CPDescription</key>
 	<string>
-		A port of the fun iPhone game, Lights Off.
-	</string>
+		Part 2 of a multi-part application tutorial. This part adds support for dragging pictures into the editing area from a library of pictures in a floating inspector.
+	</string>	
 </dict>
 </plist>
