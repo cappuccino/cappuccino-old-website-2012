@@ -1,26 +1,26 @@
 <?php
 
 $active = "Learn";
-$title = "Getting Set Up for Cappuccino"; 
+$title = "Getting Set Up for Cappuccino";
 
 include('../../includes/header.php');
 
 ?>
 
     <div id="topContentWrapper"></div>
-    
+
     <div id="mainContentWrapper">
         <div id="mainContent">
 
             <div id="subNavigation">
-            <?php 
+            <?php
                 $subActive = "Tutorials";
                 include('../learn_links.php');
             ?>
             </div>
-            
+
             <div id="mainContentDetail">
-            
+
 <h1>Getting Set Up for Web Development with Cappuccino</h1>
 
 <p>Programming for the browser is significantly different from other programming environments like a desktop OS, or even server side code. Cappuccino is largely aimed at minimizing these differences, but to be most productive you'll need to be familiar with the right set of tools. This tutorial is aimed at identifying the most useful tools for developing Cappuccino applications. If you're already ready to start programming your first Cappuccino application, try <a href="http://cappuccino.org/learn/tutorials/scrapbook-tutorial-1/">this tutorial</a>.</p>
@@ -130,7 +130,7 @@ http://localhost/MyApp/index-debug.html
         </div>
     </div>
 
-<?php 
+<?php
 
 include('../../includes/footer.php');
 
