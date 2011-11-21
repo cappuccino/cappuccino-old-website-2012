@@ -40,7 +40,8 @@ include('../../../includes/header.php');
             <div style = "float:right; margin-right:20px;">
                 <h3>Resources</h3>
                 <ul>
-                    <li><a href = "AutomaticLayout.zip"><img src = "images/zip.png" align = "center" style = "padding-right:5px;"/>Download the sample code</a></li>
+                    <li><a href = "/learn/demos/AutomaticLayout/Alert-Window-Layout.zip"><img src = "images/zip.png" align = "center" style = "padding-right:5px;"/>Alert Window Sample Code</a></li>
+                    <li><a href = "/learn/demos/AutomaticLayout/iTunes-Layout.zip"><img src = "images/zip.png" align = "center" style = "padding-right:5px;"/>iTunes Layout Sample Code</a></li>
                 </ul>
             </div>
 
@@ -71,7 +72,7 @@ include('../../../includes/header.php');
         <div class="cl">&nbsp;</div>
 
         <div class="contentbody">
-        This is where the <strong>autoresizing flags</strong> in Cappuccino and automatic layout come in.  The central idea behind automatic layout is that relayout takes place in response to a parent view changing size.  Thus, you can think of automatic layout with autoresizing flags as a "recursive" process.  Instead of creating container views that are responsible for keeping their views appropriately arranged, autoresizing flags allow each each individual view to describe how it would like to resized and repositioned relative to the changes taking place in its superview.  In this way, as each view changes size, the resizing and repositioning is "cascaded" down.  This does away with a lot of complexity of unecessary "manager" views and controllers that can make UI programming quite difficult.  The key to remember when using autoresizing flags is that the views in question do everything based solely on what happens to their superviews.  If you  keep this in mind, you will find that many seemingly complex layouts can be expressed quite easily.
+        This is where the <strong>autoresizing flags</strong> in Cappuccino and automatic layout come in.  The central idea behind automatic layout is that relayout takes place in response to a parent view changing size.  Thus, you can think of automatic layout with autoresizing flags as a "recursive" process.  Instead of creating container views that are responsible for keeping their views appropriately arranged, autoresizing flags allow each each individual view to describe how it would like to resized and repositioned relative to the changes taking place in it's superview.  In this way, as each view changes size, the resizing and repositioning is "cascaded" down.  This does away with a lot of complexity of uneccessary "manager" views and controllers that can make UI programming quite difficult.  The key to remember when using autoresizing flags is that the views in question do everything based solely on what happens to their superviews.  If you  keep this in mind, you will find that many seemingly complex layouts can be expressed quite easily.
         </div>
 
         <div class="cl">&nbsp;</div>
@@ -136,7 +137,7 @@ include('../../../includes/header.php');
         <h3>Automatic Repositioning</h3>
 
         <div class="contentbody">
-            Setting up how a view repoisitions itself is slightly more complex, as there are four different flags that control this behavior: CPViewMinXMargin, CPViewMaxXMargin, CPViewMinYMargin, and CPViewMaxYMargin.  These four flags represent the four regions around the view: left, right, top, and bottom, respectively.  By setting any one of these flags, you are specifying that you want this area to be "flexible", and stretch and shrink with the superview:
+            Setting up how a view repositions itself is slightly more complex, as there are four different flags that control this behavior: CPViewMinXMargin, CPViewMaxXMargin, CPViewMinYMargin, and CPViewMaxYMargin.  These four flags represent the four regions around the view: left, right, top, and bottom, respectively.  By setting any one of these flags, you are specifying that you want this area to be "flexible", and stretch and shrink with the superview:
         </div>
 
         <div class="cl">&nbsp;</div>

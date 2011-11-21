@@ -31,7 +31,7 @@ include('../../../includes/header.php');
                     <h3>Overview</h3>
                     
                     <div class = "contentbody">
-                    This tutorial is the second entry in the Scrapbook series in which we will be building a full featured scrapbooking application.  In the <a href = "../scrapbook-tutorial-1">previous installment</a> we set up a basic foundation for our application and got our feet wet with Cappuccino graphics.  This tutorial will cover adding drag and drop to our application, and touch on a number of important Cappuccino topics in the process.  If you haven't done so already, you should <a href = "../scrapbook-tutorial-1/Scrapbook-1.zip">download the source</a> from Part I, since that is what we will be starting off with.  You can alternatively choose to <a href="Scrapbook-2.zip">download</a> the completed source for this tutorial as well and simple follow along with the code.
+                    This tutorial is the second entry in the Scrapbook series in which we will be building a full featured scrapbooking application.  In the <a href = "../scrapbook-tutorial-1">previous installment</a> we set up a basic foundation for our application and got our feet wet with Cappuccino graphics.  This tutorial will cover adding drag and drop to our application, and touch on a number of important Cappuccino topics in the process.  If you haven't done so already, you should <a href = "/learn/demos/Scrapbook/Scrapbook-Part-1.zip">download the source</a> from Part I, since that is what we will be starting off with.  You can alternatively choose to <a href="/learn/demos/Scrapbook/Scrapbook-Part-2.zip">download</a> the completed source for this tutorial as well and simple follow along with the code.
             </div>
             
             <div class="cl">&nbsp;</div>
@@ -45,8 +45,8 @@ include('../../../includes/header.php');
                     <div style = "float:right; margin-right:20px;">
                         <h3>Resources</h3>
                         <ul>
-                            <li><a href = "Scrapbook-2.zip"><img src = "images/zip.png" align = "center" style = "padding-right:5px;"/>Download the completed source</a></li>
-                            <li><a href = "Scrapbook-2/index.html"><img src = "images/sample.png" align = "center" style = "padding-right:5px;"/>See a working sample</a></li>
+                            <li><a href = "/learn/demos/Scrapbook/Scrapbook-Part-2.zip"><img src = "images/zip.png" align = "center" style = "padding-right:5px;"/>Download the completed source</a></li>
+                            <li><a href = "/learn/demos/Scrapbook/Part%202/index-deploy.html"><img src = "images/sample.png" align = "center" style = "padding-right:5px;"/>See a working sample</a></li>
                         </ul>
                     </div>
                     

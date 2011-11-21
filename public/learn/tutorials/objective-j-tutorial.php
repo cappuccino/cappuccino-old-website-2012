@@ -150,7 +150,7 @@ var joe = [Person personWithName:"Joe"];
 
 <h2>Importing Code</h2>
 
-<p>One commonly desired technique missing from JavaScript is the ability to import code in the same way that languages like Java or C allow. To that affect, Objective-J adds the @import statement:</p>
+<p>One commonly desired technique missing from JavaScript is the ability to import code in the same way that languages like Java or C allow. To that effect, Objective-J adds the @import statement:</p>
 
 <code>
 @import &lt;Foundation/CPObject.j&gt;
@@ -199,7 +199,11 @@ var reversed = [myString reverse];
 alert(reversed);  // alerts "dlrow olleh"
 </code>
 
-<p>The syntax for the category is @implementation, followed by the class you're adding to, followed by the name of your category in parentheses. Any methods added before the @end keyword will be part of the category. Note that you can't add instance variables via categories, though due to the dynamic nature of JavaScript objects it's possible to add one by </p>
+<p>The syntax for the category is @implementation, followed by the class you're adding to, followed by the name of your category in parentheses. Any methods added before the @end keyword will be part of the category. Note that you can't add instance variables via categories, though due to the dynamic nature of JavaScript objects it's possible to add one by simply modifying the object's properties directly:</p>
+
+<code>
+instance.newProperty = "foo";
+</code>
 
 <p>It's interesting to note some of the techniques used in the implementation of the reverse method above. For example, reversedString is declared just like any typical JavaScript string. This is thanks to a technique called toll-free bridging which allows any JavaScript object like an array or a string to act both as a JavaScript object and a Cappuccino object at the same time. It responds to CPString methods like "length" and "characterAtIndex:", as well as existing JavaScript methods and operators such as "+".</p>
 

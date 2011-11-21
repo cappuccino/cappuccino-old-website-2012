@@ -29,7 +29,7 @@ include('../../includes/header.php');
 
 <p>The browser is the most important part of the development cycle. Cappuccino apps target the browser just like Cocoa apps target Mac OS X. Choosing the right browser for your development cycle is a crucial step in the process.</p>
 
-<p>There's no one right answer to the question of which browser you should be using. There are three obvious contenders: Internet Explorer, Firefox, and Safari.</p>
+<p>There's no one right answer to the question of which browser you should be using. There are four obvious contenders: Firefox, Safari, Chrome, and Internet Explorer.</p>
 
 <h3>Firefox</h3>
 
@@ -55,6 +55,23 @@ You can leave a working copy of your application on a separate webserver or deve
 <p>It is also possible to configure Firefox 3 to behave similarly: <a href="http://wiki.github.com/280north/cappuccino/developing-locally-in-firefox-3">http://wiki.github.com/280north/cappuccino/developing-locally-in-firefox-3</a></p>
 
 <center><img src="images/inspector.png" alt="webkit inspector" /></center>
+
+<h3>Chrome <a name="chrome">&nbsp;</a></h3>
+
+<p>Google's <a href="http://www.google.com/chrome">Chrome</a> browser is mostly the same as Safari, since it uses the same rendering engine as Safari, WebKit. The major difference is the security policies in place.</p>
+
+<p>Unlike Safari, Chrome does not allow you to connect to remote hosts (violating the same origin policy) when running from file:///. Not only that, but the browser goes even further: XHR requests to any other file:/// address do not work when running from a local file. Because Cappuccino uses XHR requests to load your application, Chrome cannot run Cappuccino straight from the file system. Instead, you should run through a webserver (like Apache). You can <a href="http://code.google.com/p/chromium/issues/detail?id=41024">read more about this security policy</a> on Google's bug tracker.</p>
+
+<p>If you've installed the Cappuccino tools, then you also installed a program called Narwhal, our command line JavaScript environment. You can use Narwhal to create a server in your current directory with this command:</p>
+<pre><code>
+jackup -e "require('jack/file').File('.')" -E deployment</code></pre>
+
+<p>You may also need to install jack, which is as simple as running:</p>
+<pre>
+<code>
+tusk install jack
+</code>
+</pre>
 
 <h3>Internet Explorer</h3>
 

@@ -22,7 +22,7 @@ include('../../includes/header.php');
             
                 <h1>Downloading & Running the Sample Application</h1>
             
-<p>If you haven't already, download the <a href="/starter">Cappuccino Starter package</a>. This zip file includes a copy of the Cappuccino Frameworks, a sample application (NewApplication), licensing info, and a README.</p>
+<p>If you haven't already, download the <a href="/starter">Cappuccino Starter package</a>. This zip file includes a sample application (NewApplication), licensing info, a script you can run later to download all the Cappuccino tools, and a README.</p>
 
 <center><img src="images/new-application.png" alt="open new application" /></center>
 
@@ -30,6 +30,8 @@ include('../../includes/header.php');
 <p>Once you've downloaded and unzipped the Cappuccino Starter package, open up the <em>NewApplication</em> folder, and locate the <em>index.html</em> file. Now, simply open that file in your favorite web browser by double-clicking it, or just by dragging it on top of your browser application. You should end up with something that looks like this (in Safari):</p>
 
 <center><img src="images/new-app-running-safari.png" alt="new application running in safari" /></center>
+
+<p><b>Chrome Users please note</b> that you'll need to run Cappuccino through a web server, rather than through the filesystem directly as described in the paragraph above. You can read more <a href="/learn/tutorials/getting-setup.php#chrome">here</a>.</p>
 
 <h3>The Code</h3>
 <p>The source behind this sample application is startlingly simple. Although there are a few files, the only one we're interested in right now is <em>AppController.j</em>. The others are necessary, but you don't need to modify them to work on your application.</p>

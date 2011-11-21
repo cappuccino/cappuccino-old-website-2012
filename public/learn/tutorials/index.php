@@ -31,7 +31,7 @@ include('../../includes/header.php');
                 <p>A great introduction to Objective-J.  Familiarity with JavaScript is recommended, prior knowledge of Objective-C not required.</p>
                 
                 <h2><a href="starter-tutorial.php">Downloading & Running the Sample Application</a></h2>
-                <p>Get the <a href="/starter">Cappuccino Starter</a> download, and then follow this simpe tutorial for running the sample application, and making a few simple changes.</p>
+                <p>Get the <a href="/starter">Cappuccino Starter</a> download, and then follow this simple tutorial for running the sample application, and making a few simple changes.</p>
 
                 <h2>Graphics</h2>
                 <p>Graphics are an important component of just about any UI application, the following tutorials cover different aspects of Cappuccino UI programming:</p>
@@ -39,7 +39,7 @@ include('../../includes/header.php');
                 <ul>
                     <li>
                         <h3><a href= "automatic-layout">Automatic Layout Support</a></h3>
-                        <p>This tutorial covers Cappuccino's powerful system of automatic resizing and repositioning support for creating dynamic layouts easily and quickly.</p>
+                        <p>This tutorial covers Cappuccino's powerful system for automatically resizing and repositioning views to creating dynamic layouts easily and quickly.</p>
                     </li>
                 </ul>
                     
@@ -71,6 +71,8 @@ include('../../includes/header.php');
                     <p>Overview of the debugging features of WebKit/Safari, and how to use them with Cappuccino and Objective-J, by Andre Angelantoni.</p></li>
                     
                     <li><h3><a href="http://cappuccinocasts.com/">Cappuccino Casts</a></h3><p>Video screen casts of going through Cappuccino &amp; Objective-J tutorials, hosted by Thomas Balthazar.</p></li>
+                    
+                    <li><h3><a href="http://osaficionado.com/series/chartplotter/">ChartPlotter</a></h3><p>A demo application with follow along tutorials.</p></li>
                 </ul>
             </div>
             
