@@ -28,7 +28,7 @@ include('../../../includes/header.php');
 
 <p>Before we jump into any serious programming, let's begin by getting a good idea of what we're building. The goal of the scrapbook application is to provide users with a place to arrange their photos into albums. These albums will have different themes and allow users to insert, scale, rotate, and crop their images. When done, they will be able to save and share their albums.</p>
 
-<p>As I mentioned earlier, we will be focusing on some of the core graphical aspects of this application right now, and saving most of the overall design decisions of this application for later. So the very first thing we're going to tackle is building a solid UI for scaling and cropping images. The plan is to present the user with a few controls in a heads up display which will allow them to manipulate selected images, and then go away when the user is done editing. You can see a working example of this <a href = "Scrapbook">here</a>. You should take a few minutes to play around with it and get an idea of what we will be building. You can also download the entire source of the application <a href = "Scrapbook-1.zip">here</a> if you prefer to follow along with the code.</p>
+<p>As I mentioned earlier, we will be focusing on some of the core graphical aspects of this application right now, and saving most of the overall design decisions of this application for later. So the very first thing we're going to tackle is building a solid UI for scaling and cropping images. The plan is to present the user with a few controls in a heads up display which will allow them to manipulate selected images, and then go away when the user is done editing. You can see a working example of this <a href="/learn/demos/Scrapbook/Part%201/index-deploy.html">here</a>. You should take a few minutes to play around with it and get an idea of what we will be building. You can also download the entire source of the application <a href = "/learn/demos/Scrapbook/Scrapbook-Part-1.zip">here</a> if you prefer to follow along with the code.</p>
                 
 <center><img src = "images/completed.png" width = "600" height = "454" /></center>
 
@@ -92,7 +92,7 @@ var HUDPanel = [[CPPanel alloc]
 var panelContentView = [HUDPanel contentView],
     centerX = (CGRectGetWidth([panelContentView bounds]) - 135.0) / 2.0;
 
-var scaleSlider = [[CPSlider alloc] initWithFrame:CGRectMake(centerX, 13.0, 135.0, 16.0)];
+var scaleSlider = [[CPSlider alloc] initWithFrame:CGRectMake(centerX, 13.0, 135.0, 24.0)];
 
 [scaleSlider setMinValue:50];
 [scaleSlider setMaxValue:150];
@@ -112,7 +112,7 @@ var scaleStartLabel = [self labelWithTitle:"50%"],
 [panelContentView addSubview:scaleEndLabel];
 
 rotationSlider = [[CPSlider alloc] initWithFrame:
-    CGRectMake(centerX, 43, 135, 16)];
+    CGRectMake(centerX, 43, 135, 24)];
 
 [rotationSlider setMinValue:0];
 [rotationSlider setMaxValue:360];
@@ -146,7 +146,7 @@ var rotationStartLabel = [self labelWithTitle:"0\u00B0"],
 }
 </code>
                 
-<p>This may seem daunting, but its really not that complex. Let's start by analyzing the <em>labelWithTitle:</em> method. It should look familiar, since its almost identical to the code that was in the original implementation of <em>applicationDidFinishLaunching:</em>. All we are doing is creating a text field, setting its text contents to be <strong>aTitle</strong>, setting its text color to white, and finally sizing it appropriately and returning it.</p>
+<p>This may seem daunting, but it&rsquo;s really not that complex. Let's start by analyzing the <em>labelWithTitle:</em> method. It should look familiar, since it&rsquo;s almost identical to the code that was in the original implementation of <em>applicationDidFinishLaunching:</em>. All we are doing is creating a text field, setting its text contents to be <strong>aTitle</strong>, setting its text color to white, and finally sizing it appropriately and returning it.</p>
                 
 <p>In the slider creation code we are creating two sliders: one to modify scale and another for rotation, so we only really need to go over half the code. We are making our sliders <strong>135 pixels</strong> wide, so begin by calculating the center position in our panel's content view. After we have this, We create a new slider at this position. We then set three important values for sliders: the minimum value, the maximum value, and the current value. The minimum value is what the left hand side of the slider represents, the maximum is what the right hand side represents, and the current value is simply where the knob of the slider currently resides. In this case of the <strong>scaleSlider</strong>, we want to be able to scale our photos from 50% to 150%, and obviously we want them to begin at 100%. With the rotationSlider, we want to go from 0 degrees to 360 degrees, and start at 0 degrees. To highlight these values, we create 2 labels for each slider to sit to the left and to the right of the sliders. So, your code should now look like this:</p>
                 
@@ -175,7 +175,7 @@ var rotationStartLabel = [self labelWithTitle:"0\u00B0"],
         - 135) / 2;
     
     var scaleSlider = [[CPSlider alloc]
-        initWithFrame:CGRectMake(centerX, 13, 135, 16)];
+        initWithFrame:CGRectMake(centerX, 13, 135, 24)];
     
     [scaleSlider setMinValue:50];
     [scaleSlider setMaxValue:150];
@@ -195,7 +195,7 @@ var rotationStartLabel = [self labelWithTitle:"0\u00B0"],
     [panelContentView addSubview:scaleEndLabel];
     
     rotationSlider = [[CPSlider alloc]
-        initWithFrame:CGRectMake(centerX, 43, 135, 16)];
+        initWithFrame:CGRectMake(centerX, 43, 135, 24)];
     
     [rotationSlider setMinValue:0];
     [rotationSlider setMaxValue:360];
@@ -259,7 +259,7 @@ var rotationStartLabel = [self labelWithTitle:"0\u00B0"],
             centerX = (CGRectGetWidth([contentView bounds]) - 135) / 2;
         
         scaleSlider = [[CPSlider alloc]
-            initWithFrame:CGRectMake(centerX, 13, 135, 16)];
+            initWithFrame:CGRectMake(centerX, 13, 135, 24)];
         
         [scaleSlider setMinValue:50];
         [scaleSlider setMaxValue:150];
@@ -279,7 +279,7 @@ var rotationStartLabel = [self labelWithTitle:"0\u00B0"],
         [contentView addSubview:scaleEndLabel];
         
         rotationSlider = [[CPSlider alloc]
-            initWithFrame:CGRectMake(centerX, 43, 135, 16)];
+            initWithFrame:CGRectMake(centerX, 43, 135, 24)];
         
         [rotationSlider setMinValue:0];
         [rotationSlider setMaxValue:360];
@@ -393,7 +393,7 @@ var rotationStartLabel = [self labelWithTitle:"0\u00B0"],
 @end
 </code>
             
-<p>Here we create the view as usual, but let the view know that it will be hosting a layer with the <em>setWantsLayer:</em> method, and adding the actual layer with <em>setLayer:</em>. We give the layer a background color, but need to call <em>setNeedsDisplay</em> for the layer to actuall show itself. In Cappuccino, you never explicitly tell views or layers to draw, instead you inform them that they need to do so. This is because Cappuccino coalesces and optimizes drawing.</p>
+<p>Here we create the view as usual, but let the view know that it will be hosting a layer with the <em>setWantsLayer:</em> method, and adding the actual layer with <em>setLayer:</em>. We give the layer a background color, but need to call <em>setNeedsDisplay</em> for the layer to actually show itself. In Cappuccino, you never explicitly tell views or layers to draw, instead you inform them that they need to do so. This is because Cappuccino coalesces and optimizes drawing.</p>
             
 <p>As we said earlier, we now need a pane in this page. Pane's hold images as well as storing the scale and rotation properties of the image it displays. We will be implementing panes as layers:</p>
             
@@ -631,7 +631,7 @@ var rotationStartLabel = [self labelWithTitle:"0\u00B0"],
 @end
 </code>
 
-<p>For now we are just going to use a default image for our pane, which you can download <a href = "Scrapbook/Resources/sample.jpg">here</a> and put into a folder called "Resources". We set the size of the _paneLayer with <em>setBounds</em>, and the position of the layer with a combination of <em>setAnchorPoint:</em> and <em>setPosition:</em>. This is because unlike <em>CPView</em>s, by default the <strong>position</strong> of a <em>CALayer</em> refers to the position of it's center point. To make the <strong>position</strong> refer to the top left corner, we have to specify an achor point of <strong>(0.0, 0.0)</strong>.</p>
+<p>For now we are just going to use a default image for our pane, which you can download <a href = "Scrapbook/Resources/sample.jpg">here</a> and put into a folder called "Resources". We set the size of the _paneLayer with <em>setBounds</em>, and the position of the layer with a combination of <em>setAnchorPoint:</em> and <em>setPosition:</em>. This is because unlike <em>CPView</em>s, by default the <strong>position</strong> of a <em>CALayer</em> refers to the position of its center point. To make the <strong>position</strong> refer to the top left corner, we have to specify an achor point of <strong>(0.0, 0.0)</strong>.</p>
         
 <h3>Wrapping Up</h3>
         
@@ -764,7 +764,7 @@ var PhotoInspectorSharedInstance    = nil;
 }
 </code>
             
-<p>As you can see, when we pass in a new pane layer, we first do a little bit of cleanup on our old pane layer if we have one. We tell it's corresponding page view that we are no longer editing, and then tell the new pane layer's page view that we are editing (thus dimming the border described above). We then position our window at the center of the pane.</p>
+<p>As you can see, when we pass in a new pane layer, we first do a little bit of cleanup on our old pane layer if we have one. We tell its corresponding page view that we are no longer editing, and then tell the new pane layer's page view that we are editing (thus dimming the border described above). We then position our window at the center of the pane.</p>
             
 <p>Let's actually make our two sliders useful now by giving them <strong>targets</strong> and <strong>actions</strong> in our <em>init</em> method after they are created:</p>
             
