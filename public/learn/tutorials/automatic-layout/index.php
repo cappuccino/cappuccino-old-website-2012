@@ -71,7 +71,7 @@ include('../../../includes/header.php');
         <div class="cl">&nbsp;</div>
 
         <div class="contentbody">
-        This is where the <strong>autoresizing flags</strong> in Cappuccino and automatic layout come in.  The central idea behind automatic layout is that relayout takes place in response to a parent view changing size.  Thus, you can think of automatic layout with autoresizing flags as a "recursive" process.  Instead of creating container views that are responsible for keeping their views appropriately arranged, autoresizing flags allow each each individual view to describe how it would like to resized and repositioned relative to the changes taking place in it's superview.  In this way, as each view changes size, the resizing and repositioning is "cascaded" down.  This does away with a lot of complexity of unecessary "manager" views and controllers that can make UI programming quite difficult.  The key to remember when using autoresizing flags is that the views in question do everything based solely on what happens to their superviews.  If you  keep this in mind, you will find that many seemingly complex layouts can be expressed quite easily.
+        This is where the <strong>autoresizing flags</strong> in Cappuccino and automatic layout come in.  The central idea behind automatic layout is that relayout takes place in response to a parent view changing size.  Thus, you can think of automatic layout with autoresizing flags as a "recursive" process.  Instead of creating container views that are responsible for keeping their views appropriately arranged, autoresizing flags allow each each individual view to describe how it would like to resized and repositioned relative to the changes taking place in its superview.  In this way, as each view changes size, the resizing and repositioning is "cascaded" down.  This does away with a lot of complexity of unecessary "manager" views and controllers that can make UI programming quite difficult.  The key to remember when using autoresizing flags is that the views in question do everything based solely on what happens to their superviews.  If you  keep this in mind, you will find that many seemingly complex layouts can be expressed quite easily.
         </div>
 
         <div class="cl">&nbsp;</div>
@@ -81,7 +81,7 @@ include('../../../includes/header.php');
         </div>
 
         <div class="contentbody">
-            To use automatic layout we will be using the <span class = "selector">setAutoresizingMask:</span> method defined in CPView.  To use this method, you will have to familiarize ourselves with the concept of "masks".  Masks are just variables that can be OR'ed together to create more complex descriptions.  Cappuccino uses masks to represent each of the different layout values.  For example, if you wanted a view to use both the CPViewWidthSizable flag and the CPViewHeightSizable flag, you can pute them together with the | operator as so:
+            To use automatic layout we will be using the <span class = "selector">setAutoresizingMask:</span> method defined in CPView.  To use this method, you will have to familiarize ourselves with the concept of "masks".  Masks are just variables that can be OR'ed together to create more complex descriptions.  Cappuccino uses masks to represent each of the different layout values.  For example, if you wanted a view to use both the CPViewWidthSizable flag and the CPViewHeightSizable flag, you can put them together with the | operator as so:
         </div>
 
         <div class="cl">&nbsp;</div>
@@ -113,7 +113,7 @@ include('../../../includes/header.php');
         </div>
 
         <div class="contentbody">
-            A good example of this would be when you want a view to remain the exact same size as it's superview.  In this case, you want to use both of these flags together:
+            A good example of this would be when you want a view to remain the exact same size as its superview.  In this case, you want to use both of these flags together:
         </div>
 
         <div class="cl">&nbsp;</div>
@@ -122,7 +122,7 @@ include('../../../includes/header.php');
 [view <span class = "selector">setAutoresizingMask:</span>CPViewWidthSizable | CPViewHeightSizable];</div>
 
         <div class="contentbody">
-            Here you can see a very common design pattern in Cappuccino layout.  We've started by arranging the views the way we want them to currently be, and then defined how they should adjust when changes take place.  Since we wanted the view in question to follow the size of it's superview, we first set it's frame to be equal to the superview's bounds.  We then set both the CPViewWidthSizable and CPViewHeightSizable flags so that as the superview grows the view does as well.
+            Here you can see a very common design pattern in Cappuccino layout.  We've started by arranging the views the way we want them to currently be, and then defined how they should adjust when changes take place.  Since we wanted the view in question to follow the size of its superview, we first set its frame to be equal to the superview's bounds.  We then set both the CPViewWidthSizable and CPViewHeightSizable flags so that as the superview grows the view does as well.
         </div>
 
     </div>
@@ -180,7 +180,7 @@ include('../../../includes/header.php');
         </div>
 
         <div class="contentbody">
-            We begin by looking at each of these elements independently and see how they should reflow as the window changes size.  The icon on the left is easy, it should stay tied to the top left.  If you recall from before, another way of saying this is that it should only have flexible space to it's bottom and right:
+            We begin by looking at each of these elements independently and see how they should reflow as the window changes size.  The icon on the left is easy, it should stay tied to the top left.  If you recall from before, another way of saying this is that it should only have flexible space to its bottom and right:
         </div>
 
         <div class="cl">&nbsp;</div>
@@ -281,7 +281,7 @@ include('../../../includes/header.php');
         </div>
 
         <div class="contentbody">
-            Again, we can quickly tackle this behavior by examining each individual view <strong>independently</strong> and seeing how it should resize on it's own:
+            Again, we can quickly tackle this behavior by examining each individual view <strong>independently</strong> and seeing how it should resize on its own:
         </div>
 
         <div class="cl">&nbsp;</div>
@@ -291,7 +291,7 @@ include('../../../includes/header.php');
         </div>
 
         <div class="contentbody">
-            Now, the navigation area only resizes vertically, but also allows for flexible space on it's right:
+            Now, the navigation area only resizes vertically, but also allows for flexible space on its right:
         </div>
 
         <div class="cl">&nbsp;</div>
