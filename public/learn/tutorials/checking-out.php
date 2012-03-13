@@ -1,28 +1,28 @@
 <?php
 
 $active = "Learn";
-$title = "Checking out the Cappuccino Source Code"; 
+$title = "Checking out the Cappuccino Source Code";
 
 include('../../includes/header.php');
 
 ?>
     <div id="topContentWrapper"></div>
-    
+
     <div id="mainContentWrapper">
         <div id="mainContent">
 
             <div id="subNavigation">
-            <?php 
+            <?php
                 $subActive = "Tutorials";
                 include('../learn_links.php');
             ?>
             </div>
-            
+
             <div id="mainContentDetail">
-            
+
                 <h1>Checking out the Cappuccino Source Code</h1>
-            
-<p>Once you've completed the <a href="/learn/tutorials/">other tutorials</a> and are familiar with the basics of creating Cappuccino applications, you may want to dig deeper into the source code for Cappuccino. The code is managed using the <a href="http://git-scm.com/">Git</a> version control system, and hosted on <a href="http://github.com/280north/cappuccino">GitHub</a>.</p>
+
+<p>Once you've completed the <a href="/learn/tutorials/">other tutorials</a> and are familiar with the basics of creating Cappuccino applications, you may want to dig deeper into the source code for Cappuccino. The code is managed using the <a href="http://git-scm.com/">Git</a> version control system, and hosted on <a href="http://github.com/cappuccino/cappuccino">GitHub</a>.</p>
 
 <h3>Prerequisites</h3>
 
@@ -40,7 +40,7 @@ include('../../includes/header.php');
 <p>To obtain the latest source, simply clone the Cappuccino repository from GitHub to a directory of your choice:</p>
 
 <code class="action">
-git clone git://github.com/280north/cappuccino.git ~/Cappuccino
+git clone git://github.com/cappuccino/cappuccino.git ~/Cappuccino
 </code>
 
 <h3>Building Cappuccino</h3>
@@ -67,12 +67,12 @@ steam
 
 <p>We're still working out these and other inevitable kinks, so if you're having problems don't be afraid to <a href="http://cappuccino.org/discuss/list.php">ask for help</a>!</p>
             </div>
-            
+
             <div style="clear: both;"></div>
         </div>
     </div>
 
-<?php 
+<?php
 
 include('../../includes/footer.php');
 

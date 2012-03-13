@@ -41,7 +41,7 @@ include('../../includes/header.php');
 
 <p>In Safari, files running locally (i.e. file:///MyFolder/MyApplication/index.html) are allowed to access requests from any origin. This was designed so that Dashboard widgets could access external sites, but it's especially useful for application development. You can leave a working copy of your application on a separate webserver or development box, and use it as your backend for local development, without worrying about the same origin policy.</p>
 
-<p>It is also possible to configure Firefox 3 to behave similarly: <a href="http://wiki.github.com/280north/cappuccino/developing-locally-in-firefox-3">http://wiki.github.com/280north/cappuccino/developing-locally-in-firefox-3</a></p>
+<p>It is also possible to configure Firefox 3 to behave similarly: <a href="http://wiki.github.com/cappuccino/cappuccino/developing-locally-in-firefox-3">http://wiki.github.com/cappuccino/cappuccino/developing-locally-in-firefox-3</a></p>
 
 <center><img src="images/inspector.png" alt="webkit inspector" /></center>
 

@@ -31,11 +31,11 @@
             <div class="footerNavSection">
                 <h4><a href="/contribute">Contribute</a></h4>
                 <ul>
-                    <li><a href="http://github.com/280north/cappuccino">Source Code</a></li>
-                    <li><a href="http://github.com/280north/cappuccino/issues">Bug Tracking</a></li>
-                    <li><a href="http://github.com/280north/cappuccino/wikis">Wiki</a></li>
+                    <li><a href="http://github.com/cappuccino/cappuccino">Source Code</a></li>
+                    <li><a href="http://github.com/cappuccino/cappuccino/issues">Bug Tracking</a></li>
+                    <li><a href="http://github.com/cappuccino/cappuccino/wikis">Wiki</a></li>
                     <li><a href="http://contributors.cappuccino.org/">Contributors</a></li>
-                    <li><a href="http://github.com/280north/cappuccino/wikis/projects-to-work-on">Projects to Work On</a></li>
+                    <li><a href="http://github.com/cappuccino/cappuccino/wikis/projects-to-work-on">Projects to Work On</a></li>
                 </ul>
             </div>
             <div class="footerNavSection">
@@ -43,13 +43,13 @@
                 <p>Cappuccino and Objective-J are licensed under the <a href="/learn/lgpl.txt">LGPL</a>.
                 For more information, see our <a href="/learn/licensing.php">licensing page</a>.</p>
             </div>
-            
+
             <div id="copyrightInfo">
-                Copyright &copy; 2009 - <a href="http://280north.com">280 North, Inc.</a>  
+                Copyright &copy; 2009 - <a href="http://280north.com">280 North, Inc.</a>
                 Cappuccino and Objective-J are registered Trademarks of 280 North.
                 <!--<a href="#">Legal Information</a>.-->
                 <a href="http://madebysofa.com"><img src="/images/minisofa.png" alt="" /></a>
-                Logo by <a href="http://madebysofa.com">Sofa</a>. 
+                Logo by <a href="http://madebysofa.com">Sofa</a>.
                 Hosting by <a href="http://slicehost.com">Slicehost</a>.
             </div>
         </div>

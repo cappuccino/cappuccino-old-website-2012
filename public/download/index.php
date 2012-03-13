@@ -1,7 +1,7 @@
 <?php
 
 $active = "Download";
-$title = "Download"; 
+$title = "Download";
 include('../includes/header.php');
 
 ?>
@@ -27,19 +27,19 @@ include('../includes/header.php');
                 </div>
             </div>
             <div style="clear:both;"></div>
-        </div>    
+        </div>
     </div>
-    
+
     <div id="mainContentWrapper">
         <div id="mainContent">
-        
+
 <h3>Now What?</h3>
 <p>You'll probably want to check out our <a href="/learn/tutorials/">tutorials</a> section.  <a href="/learn/tutorials/starter-tutorial.php">This one</a> is designed specifically for figuring out what to do the very first time you download Cappuccino.</p>
 
 <h3>Getting the Source</h3>
-<p>If you'd like the full source, you can check it out on our Github <a href="http://github.com/280north/cappuccino/">repository</a>, or clone it with this command:</p>
+<p>If you'd like the full source, you can check it out on our Github <a href="http://github.com/cappuccino/cappuccino/">repository</a>, or clone it with this command:</p>
 <code>
-git clone git://github.com/280north/cappuccino.git
+git clone git://github.com/cappuccino/cappuccino.git
 </code>
 <p>Learn more about <a href="/contribute">contributing</a>.</p>
 
@@ -58,12 +58,12 @@ git clone git://github.com/280north/cappuccino.git
 </ul>
 
 <h3>Contributors</h3>
-<p>Visit the <a href="http://contributors.cappuccino.org/">contributors page</a> for a list of contributors to Cappuccino. For a list of Cappuccino forks on Github, check out the <a href="http://github.com/280north/cappuccino/network">network</a> page.</p>
+<p>Visit the <a href="http://contributors.cappuccino.org/">contributors page</a> for a list of contributors to Cappuccino. For a list of Cappuccino forks on Github, check out the <a href="http://github.com/cappuccino/cappuccino/network">network</a> page.</p>
 
         </div>
     </div>
 
-<?php 
+<?php
 
 include('../includes/footer.php');
 
