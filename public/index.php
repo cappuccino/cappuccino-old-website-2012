@@ -9,7 +9,7 @@ include('includes/header.php');
     <div id="topContentWrapper">
         <div id="topContent">
             <div id="topLeftContent">
-                <img width="300" height="300" id="logoImage" src="images/cappuccino-icon.png" alt="cappuccino"/>
+                <img width="300"  id="logoImage" src="images/cappuccino-icon.png" alt="cappuccino"/>
                 <h2 id="cappuccinoTagline">
                     Cappuccino is an open source framework that makes it easy
                     to build desktop-caliber applications that run in a web browser.
@@ -40,6 +40,7 @@ include('includes/header.php');
                 </div>
             </div>
             <div style="clear:both;"></div>
+            <p style="text-align:center; font-size:22px;"><a href="/discuss/2011/11/16/cappuccino-0-9-5/">Cappuccino 0.9.5</a> - Amazing release for amazing web applications</p>
         </div>
     </div>
 
@@ -71,7 +72,7 @@ include('includes/header.php');
                 </div>
                 <div class="pressPost">
                     <img class="pressImage" src="images/carsonified.png" alt="carsonified" />
-                    <h3><a href="http://www.carsonified.com/web-apps/why-objective-j-cappuccino-and-sproutcore-are-completely-changing-the-web-app-industry">Why Objective-J, Cappuccino and SproutCore are
+                    <h3><a href="http://thinkvitamin.com/web-apps/why-objective-j-cappuccino-and-sproutcore-are-completely-changing-the-web-app-industry">Why Objective-J, Cappuccino and SproutCore are
                     completely changing the web app industry</a></h3>
                     <p>...if you use Cappuccino, those apps will automatically look and behave like ... desktop apps - with zero learning curve on the developer's side. He or she can simply focus on building an kick ass app instead of trying to re-invent basic UI functionality every single time.</p>
                     <h4>Ryan Carson, Carsonified</h4>
